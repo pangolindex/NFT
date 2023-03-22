@@ -47,9 +47,6 @@ function mintNFTs(uint256 numberOfNfts) public {
     event NftsMinted(address indexed to, uint256 numberOfNfts);
 ```
 
-# Notes
-We may need to change the smart contracts in future to allow changing Metadata. es. This is not disallowed by the standard and so you are free to do this.
+We also need to allow permissioned access to update metadata on the NFT's.
 
-You will simply add a public function that calls the internal _setTokenUri function which is waiting for you.
-
-It will be up to you decide whether to allow anybody to change any URI anytime or if certain restrictions will be implemented.
+We will simply add a public function that calls the internal _setTokenUri function which is waiting for you.
