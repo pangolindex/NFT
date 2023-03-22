@@ -11,6 +11,25 @@ In terms of the Metadata, I'll be minting them as follows:
 * Season 1 - Original Team (Justin, Brandon and Leo)
 * Season 2 - Current Core team
 
+# Traits
+```
+{
+    "trait_type": "Contributor Role",
+    "value": ["Community Voted Team", "Fulltime Core Team"]
+},
+{
+    "trait_type": "Edition",
+    "value": "Genesis"
+}
+{
+    "trait_type": "Access Permissions",
+    "value": ["All", "Deal Flow"]
+}
+{
+    "trait_type: "Voting Rights",
+    "value": "All Chains"
+}
+```
 # TODO
 Need to add a function to mint multiple NFT's at once. Something like this
 
