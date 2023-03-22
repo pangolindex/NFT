@@ -16,6 +16,10 @@ module.exports = {
       fuji: {
         url: API_URL,
         accounts: [`0x${PRIVATE_KEY}`]
-     }
+     },
+     avalanche: {
+      url: API_URL,
+      accounts: [`0x${PRIVATE_KEY}`]
+   },
    },
 }
