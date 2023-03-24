@@ -3,7 +3,7 @@
 */
 require('dotenv').config();
 require("@nomiclabs/hardhat-ethers");
-const { API_URL, PRIVATE_KEY } = process.env;
+const { FUJI_API_URL, AVAX_API_URL, API_URL, PRIVATE_KEY } = process.env;
 module.exports = {
    solidity: "0.8.1",
    defaultNetwork: "polygon",
@@ -14,11 +14,11 @@ module.exports = {
          accounts: [`0x${PRIVATE_KEY}`]
       },
       fuji: {
-        url: API_URL,
+        url: FUJI_API_URL,
         accounts: [`0x${PRIVATE_KEY}`]
      },
      avalanche: {
-      url: API_URL,
+      url: AVAX_API_URL,
       accounts: [`0x${PRIVATE_KEY}`]
    },
    },

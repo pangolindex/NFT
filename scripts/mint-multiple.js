@@ -1,7 +1,7 @@
 const Web3 = require('web3');
 require("dotenv").config();
 
-const provider = process.env.AVAX_API_URL;
+const provider = process.env.FUJI_API_URL;
 const web3 = new Web3(provider);
 const PUBLIC_KEY = process.env.PUBLIC_KEY
 const PRIVATE_KEY = process.env.PRIVATE_KEY
@@ -9,8 +9,7 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY
 const abi = require("../artifacts/contracts/NFT.sol/MyNFT.json")
 const contractAddress = process.env.NFT_CONTRACT
 const contract = new web3.eth.Contract(abi.abi, contractAddress)
-
-async function mintNFT(tokenURI) {
+async function mintMultiple(tokenURIs) {
   const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //get latest nonce
 
   //the transaction
@@ -19,7 +18,7 @@ async function mintNFT(tokenURI) {
     to: contractAddress,
     nonce: nonce,
     gas: 500000,
-    data: contract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI(),
+    data: contract.methods.mintMultiple(PUBLIC_KEY, tokenURIs).encodeABI(),
   }
 
   const signPromise = web3.eth.accounts.signTransaction(tx, PRIVATE_KEY)
@@ -47,5 +46,5 @@ async function mintNFT(tokenURI) {
     })
 }
 
-mintNFT("ipfs://QmR7bgdQi98SMp6TjidkwZhbU621BMr15PPuhMyuPkLQPT")
-
+const ipfsMetadata = ["ipfs://QmfGB2oFKmaEKTK2CygVoazHBRyqpyFeiuiRovTimz1Si6","ipfs://QmfGB2oFKmaEKTK2CygVoazHBRyqpyFeiuiRovTimz1Si6"]
+mintMultiple(ipfsMetadata)

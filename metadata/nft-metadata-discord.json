@@ -1,12 +1,12 @@
 {
     "attributes": [
       {
-        "trait_type": "ContributorRole",
-        "value": "Core Team"
+        "trait_type": "Access Permissions",
+        "value": "discord"
       }
     ],
     "description": "Pangolin's community NFT Series",
-    "image": "QmRpHKvS8PNkngqwgTFihAJiSS2kp5sDzdwpTujCfeuKjE",
+    "image": "QmcNPoB8sZNx9isCksK5Xkmv5NN54doVTKY35SFroY1F5s",
     "name": "Pangolin Degenista"
   }
   
